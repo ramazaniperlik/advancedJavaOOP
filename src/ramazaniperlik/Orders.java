@@ -14,10 +14,10 @@ public class Orders {
 
     public static Orders makeFromStringList(List<String> rows){
         var list = new ArrayList<Order>();
-        boolean baslikMi = true;
+        boolean isTitle = true;
         for(String row:rows){
-            if(baslikMi){
-                baslikMi=false;
+            if(isTitle){
+                isTitle=false;
                 continue;
     }
        var cells = row.split(",");
@@ -34,11 +34,18 @@ public class Orders {
     Orders newOrders = new Orders(list);
     return newOrders;
     }
-    public List<Orders> accordingDate(LocalDate date) {
-        //TODO: Orders will being showed according to input date.
+    public List<Order> accordingDate(LocalDate date) {
+        ArrayList<Order> resultList = new ArrayList<>();
+        for(var order:orderList)
+            if(order.getDate().equals(date))
+                resultList.add(order);
+            return resultList;
     }
-    public List<Orders> accordingName(String customerName){
-        //TODO: Orders will being showed according to input customerName.
-
+    public List<Order> accordingName(String customerNameSurname){
+      ArrayList<Order> resultList = new ArrayList<>();
+      for(var order:orderList)
+          if(order.getCustomerNameSurname().contains(customerNameSurname))
+              resultList.add(order);
+          return resultList;
     }
 }

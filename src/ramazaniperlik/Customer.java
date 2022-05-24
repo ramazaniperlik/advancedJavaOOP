@@ -2,13 +2,25 @@ package ramazaniperlik;
 
 public class Customer {
     private int customerId;
-    private String customerAdi;
-    private String customerSoyadi;
+    private String customerName;
+    private String customerSurname;
 
-    public Customer(int customerId, String customerAdi, String customerSoyadi) {
+    public Customer(int customerId, String customerName, String customerSurname) {
         this.customerId = customerId;
-        this.customerAdi = customerAdi;
-        this.customerSoyadi = customerSoyadi;
+        this.customerName = customerName;
+        this.customerSurname = customerSurname;
     }
 
+    public String getName(){
+        return customerName;
+    }
+
+    public String getSurame(){
+        return customerSurname;
+    }
+
+    @Override
+    public String toString(){
+        return customerName + " " + customerSurname;
+    }
 }

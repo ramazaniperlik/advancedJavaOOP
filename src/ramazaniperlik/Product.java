@@ -8,4 +8,9 @@ package ramazaniperlik;
             this.productId = productId;
             this.productName = productName;
         }
+
+        @Override
+        public String toString(){
+            return productName;
+        }
     }

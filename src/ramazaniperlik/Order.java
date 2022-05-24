@@ -15,4 +15,15 @@ public class Order {
         customer = new Customer(customerId,customerName,customerSurname);
         product = new Product(productId,productName);
     }
+    public LocalDate getDate(){
+        return date;
+    }
+    public String getCustomerNameSurname(){
+        return customer.getName()+" "+customer.getSurame();
+    }
+
+    @Override
+    public String toString(){
+    return date + " " + customer + " " + product + " " + quantity;
+}
 }

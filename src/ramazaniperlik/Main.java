@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Main {
 
    static Orders orders;
+
     public static void main(String[] args) throws IOException {
        List<String> rows =  Files.readAllLines(Paths.get("C:\\Users\\ramaz\\Desktop\\veri.txt"));
         orders = Orders.makeFromStringList(rows);
@@ -28,16 +29,16 @@ public class Main {
             if(secim == 1){
                 System.out.println("Tarih giriniz");
                 String dateString = scanner.nextLine();
-                LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern(("dd.MM.yyyy")));
-                List<Orders> orderList = orders.accordingDate(date);
+                LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+                List<Order> orderList = orders.accordingDate(date);
                 for(var order:orderList){
                     System.out.println(order);
                 }
             }
             else if(secim == 2){
-                System.out.println("Müşteri Adı giriniz");
-                String customerName = scanner.nextLine();
-                List<Orders> orderList = orders.accordingName(customerName);
+                System.out.println("Müşteri Adı ve Soyadı giriniz");
+                String customerNameSurname = scanner.nextLine();
+                List<Order> orderList = orders.accordingName(customerNameSurname);
                 for(var order:orderList){
                     System.out.println(order);
                 }
