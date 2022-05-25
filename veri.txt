@@ -1,0 +1,6 @@
+Tarih,UrunAd,UrunNo,Adet,MusNo,MusAd,MusSoyad
+21.11.2007,Nokia 6300,57436,1,875,Ali,Korkmaz
+23.11.2007,Kingston 2 GB USB,73654,2,876,Mehmet,Durmaz
+24.11.2007,Philips DVP 5160,90866,1,232,Metin,Kaplan
+23.11.2007,Canon Powershot A650,95353,1,554,Ece,Çağlayan
+25.11.2007,Samsung D600,65325,3,145,Kamil,Sönmez
